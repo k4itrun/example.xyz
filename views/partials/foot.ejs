@@ -1,0 +1,31 @@
+<html lang="en">
+	<script src=/script.js></script>
+		<script>
+			tippy("#theme",{
+				content:"Alternar Tema",
+				placement:"right",
+				zIndex:9999,
+				maxWidth:500,
+				interactiveBorder:30,
+				duration:[500,200],
+				animation:"fade",
+				allowHTML:!0,
+				moveTransition:"transform 0.2s ease-out"
+				})
+		</script>
+		
+		<script>
+			$(document).ready((
+				function(){
+					localStorage.getItem("cookies") && "true" === localStorage.getItem("cookies") || Swal.fire({
+						title:"Nosotros usamos cookies 🍪",
+						html:"Al navegar por nuestro sitio web aceptas que utilizamos cookies.",
+						focusConfirm:!1,
+						confirmButtonText:"¡Entiendo!",
+						preConfirm:e=>{
+							localStorage.setItem("cookies","true")
+						}
+					})
+				}))
+		</script>
+</html>
