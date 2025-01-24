@@ -1,4 +1,4 @@
-// Nav links
+// Nav links =>
 export const navLinks = [
     {
         name: 'Home',
@@ -71,5 +71,5 @@ export const redirects = [
     },
 ];
 
-// Default Port
+// Default Port =>
 export const port = 3001;

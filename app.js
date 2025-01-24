@@ -49,8 +49,14 @@ redirects.forEach(({ source, destination, permanent }) => {
   });
 });
 
+// Error =>
 app.use((req, res) => {
-  res.status(404).render('404');
+  res.status(404).render('404', { navLinks, site, openGraph, twitter, fonts, adsense });
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render('500', { navLinks, site, openGraph, twitter, fonts, adsense });
 });
 
 // Starting web =>

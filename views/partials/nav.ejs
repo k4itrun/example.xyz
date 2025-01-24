@@ -1,15 +1,20 @@
 <nav>
-	<script type=text/javascript>
+	<script>
 		let preload = document.createElement("div");
-		preload.className = "loading-screen",
-		preload.innerHTML = '<div class="loader"></div><div class="spinner"></div><div class="cube1"></div><div class="cube2"></div>',
-		document.body.appendChild(preload),
-		window.addEventListener("load", (function() {
-			preload.className+="fade"
-		})),
-		setTimeout((function() {
-			preload.style.display = "none"
-		}), 600)
+		preload.className = "loading-screen";
+		preload.innerHTML = `
+			<div class="spinner">
+				<div class="cube1"></div>
+				<div class="cube2"></div>
+			</div>
+		`;
+		document.body.appendChild(preload);
+		window.addEventListener("load", function () {
+			preload.classList.add("fade");
+		});
+		setTimeout(function () {
+			preload.style.display = "none";
+		}, 600);
 	</script>
 	<noscript>
 		<div class=no-js>Please enable javascript in your browser</div>
@@ -29,13 +34,13 @@
 	<div class=nav>
 		<div class=nav-c>
 			<ul class=nav__list>
-				<% navLinks.forEach(link => { %>
+				<% navLinks.forEach(link=> { %>
 					<li class="nav-li <%= link.external ? 'active' : '' %>">
 						<a href="<%= link.url %>" class="hover" target="<%= link.external && '_blank' %>">
 							<%= link.name %>
 						</a>
 					</li>
-				<% }) %>
+					<% }) %>
 			</ul>
 		</div>
 	</div>

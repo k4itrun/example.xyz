@@ -395,24 +395,28 @@ body.n-ac .nav:before {
 
 .loading-screen {
   background: var(--background);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   perspective: 1600px;
   perspective-origin: 20% 50%;
-  transition: 0.5s all;
+  transition: opacity 0.5s ease;
   opacity: 1;
 }
 
-.loading-screen fade {
+.loading-screen.fade {
   opacity: 0;
+  pointer-events: none;
 }
 
 .spinner {
-  margin: 100px auto;
+  margin: 0;
   width: 40px;
   height: 40px;
   position: relative;
@@ -426,13 +430,10 @@ body.n-ac .nav:before {
   position: absolute;
   top: 0;
   left: 0;
-
-  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
   animation: sk-cubemove 1.8s infinite ease-in-out;
 }
 
 .cube2 {
-  -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
 
