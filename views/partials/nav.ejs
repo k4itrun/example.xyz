@@ -31,7 +31,7 @@
 			<ul class=nav__list>
 				<% navLinks.forEach(link => { %>
 					<li class="nav-li <%= link.external ? 'active' : '' %>">
-						<a href="<%= link.url %>" class="hover" target="<%= link.external ? '_blank' : '_self' %>">
+						<a href="<%= link.url %>" class="hover" target="<%= link.external && '_blank' %>">
 							<%= link.name %>
 						</a>
 					</li>

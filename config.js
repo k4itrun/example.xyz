@@ -13,7 +13,7 @@ export const navLinks = [
     {
         name: 'YouTube',
         url: '/youtube',
-        external: true,
+        external: false,
     },
 ];
 
