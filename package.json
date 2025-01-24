@@ -1,21 +1,24 @@
 {
-  "name": "home_team_arcades",
+  "name": "expressjs",
   "version": "1.0.0",
-  "description": "no",
-  "main": "index.js",
+  "type": "module",
+  "description": "A simple Express.js application using EJS for templating",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
-    "body-parser": "^1.20.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "html": "^1.0.0",
-    "json": "^11.0.0",
-    "path": "^0.12.7"
+    "express-minify-html-terser": "^1.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  }
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "author": "k4itrun",
+  "license": "MIT"
 }

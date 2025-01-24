@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- General metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="theme-color" content="<%= site.themeColor %>">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="width">
+    <meta name="revisit-after" content="3 days">
+
+    <!-- SEO -->
+    <meta name="description" content="<%= site.description %>">
+    <meta name="keywords" content="<%= site.keywords %>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="<%= openGraph.type %>">
+    <meta property="og:site_name" content="<%= openGraph.siteName %>">
+    <meta property="og:url" content="<%= site.url %>">
+    <meta property="og:title" content="<%= site.title %>">
+    <meta property="og:description" content="<%= openGraph.description %>">
+    <meta property="og:image" content="<%= openGraph.image %>">
+    <meta property="og:image:alt" content="<%= openGraph.imageAlt %>">
+
+    <!-- Twitter -->
+    <meta name="twitter:creator" content="<%= twitter.creator %>">
+    <meta name="twitter:site" content="<%= twitter.site %>">
+    <meta property="twitter:card" content="<%= twitter.cardType %>">
+    <meta property="twitter:url" content="<%= site.url %>">
+    <meta property="twitter:title" content="<%= site.title %>">
+    <meta property="twitter:description" content="<%= site.description %>">
+    <meta property="twitter:image" content="<%= openGraph.image %>">
+    <meta property="twitter:image:alt" content="<%= twitter.imageAlt %>">
+
+    <!-- Title and favicon -->
+    <title><%= site.title %></title>
+    <link rel="icon" type="image/png" href="<%= site.favicon %>">
+
+    <!-- Preconnection and sources -->
+    <% fonts.fonts.forEach(font => { %>
+      <link rel="preconnect" href="<%= font %>">
+    <% }); %>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsense.client %>" crossorigin="anonymous"></script>
+</head>
+<%- include('./nav') %>

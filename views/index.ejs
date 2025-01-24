@@ -1,18 +1,15 @@
-<%- include('./partials/head') %> 
-<%- include('./partials/nav') %> 
-<html lang="en">
-		<section class=main>
-			<div class=middle>
-				<div class=coming-soon>
-					<h1>¡BIENVENIDOS TODOS!</h1>
-					<p>Team Arcades</p>
-					<div class=discord>
-						<a class=hover href=/api>
-						<button>Sitio Oficial</button>
-					</a>
-						</div>
-					</div>
-				</div>
-			</section>
-</html>
-<%- include('./partials/foot') %>
+<%- include('./partials/header') %>
+<section class=main>
+	<div class=middle>
+		<div class=coming-soon>
+			<h1>WELCOME EVERYONE!</h1>
+			<p><%= site.name %></p>
+			<div class=discord>
+				<a class=hover href='/'>
+					<button>Official Site</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<%- include('./partials/footer') %>

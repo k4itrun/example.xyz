@@ -1,59 +1,46 @@
-<html lang="en">
-	<nav>
-		<script type=text/javascript>
-			var preload=document.createElement("div");
-			preload.className="loading-screen",
-			preload.innerHTML='<div class="loader"></div><div class="spinner"></div><div class="cube1"></div><div class="cube2"></div>',
-				document.body.appendChild(preload),
-				window.addEventListener("load",(
-					function(){
-						preload.className+="fade"
-					})),
-				setTimeout((function(){
-					preload.style.display="none"
-				}),600)
-		</script>
-		
-		<noscript>
-			<div class=no-js>Please enable javascript in your browser</div>
-		</noscript>
-		
-		<header class=header>
-			<a id=theme class="logo hover"></a>
-			<div class=h-wr>
-				<div class=h-wr-r>
-					<div class="mi hover">
-						<span class="m-i m-i-left"></span> 
-						<span class=m-i></span>
-						<span class="m-i m-i-right"></span>
-						</div>
-					</div>
+<nav>
+	<script type=text/javascript>
+		let preload = document.createElement("div");
+		preload.className = "loading-screen",
+		preload.innerHTML = '<div class="loader"></div><div class="spinner"></div><div class="cube1"></div><div class="cube2"></div>',
+		document.body.appendChild(preload),
+		window.addEventListener("load", (function() {
+			preload.className+="fade"
+		})),
+		setTimeout((function() {
+			preload.style.display = "none"
+		}), 600)
+	</script>
+	<noscript>
+		<div class=no-js>Please enable javascript in your browser</div>
+	</noscript>
+	<header class=header>
+		<a id=theme class="logo hover"></a>
+		<div class=h-wr>
+			<div class=h-wr-r>
+				<div class="mi hover">
+					<span class="m-i m-i-left"></span>
+					<span class=m-i></span>
+					<span class="m-i m-i-right"></span>
 				</div>
-		</header>
-		
-		<div class=nav>
-			<div class=nav-c>
-				<ul class=nav__list>
-					<li class="nav-li">
-						<a href=/ class=hover>Inicio</a>
-					</li>
-					<li class="nav-li active">
-						<a href=https://discord.gg/utmuExHwyT class=hover>Discord</a>
-					</li>
-					<li class="nav-li active">
-						<a href=/yt class=hover>Youtube</a>
-					</li>
-					<li class=nav-li>
-						<a href=https://team.arcades.ga class=hover>Login</a>
-					</li>
-				</ul>
 			</div>
 		</div>
-		
-		<div class=cursor id=c1></div>
-		<div class=cursor2 id=c2></div>
-		<div class=cursor3 id=c3></div>
-		
-		<audio id=hau src=/audio.ogg preload=auto></audio>
-	</nav>
-</html>
+	</header>
+	<div class=nav>
+		<div class=nav-c>
+			<ul class=nav__list>
+				<% navLinks.forEach(link => { %>
+					<li class="nav-li <%= link.external ? 'active' : '' %>">
+						<a href="<%= link.url %>" class="hover" target="<%= link.external ? '_blank' : '_self' %>">
+							<%= link.name %>
+						</a>
+					</li>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+	<div class=cursor id=c1></div>
+	<div class=cursor2 id=c2></div>
+	<div class=cursor3 id=c3></div>
+	<audio id=hau src='/audio/small.ogg' preload=auto></audio>
+</nav>

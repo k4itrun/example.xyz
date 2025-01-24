@@ -1,0 +1,29 @@
+<script src='/js/script.js'></script>
+<script>
+	tippy("#theme", {
+		content: "Alternative theme",
+		placement: "right",
+		zIndex: 9999,
+		maxWidth: 500,
+		interactiveBorder: 30,
+		duration: [500, 200],
+		animation: "fade",
+		allowHTML: !0,
+		moveTransition: "transform 0.2s ease-out"
+	})
+</script>
+<script>
+	$(document).ready((
+		function () {
+			localStorage.getItem("cookies") && "true" === localStorage.getItem("cookies") || Swal.fire({
+				title: "We use cookies 🍪",
+				html: "By browsing our website you accept that we use cookies.",
+				focusConfirm: !1,
+				confirmButtonText: "I understand!",
+				preConfirm: e => {
+					localStorage.setItem("cookies", "true")
+				}
+			})
+		}))
+</script>
+</html>
