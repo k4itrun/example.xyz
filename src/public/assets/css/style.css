@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 html,
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  --logourl: url("/img/logo/light.png");
+  --logourl: url('/img/logo/light.png');
   --background: #000000;
   --color: #ddac3d;
   --navcolor: rgba(20, 21, 26, 0.6);
@@ -26,7 +26,7 @@ body {
 }
 
 body.light {
-  --logourl: url("/img/logo/dark.png");
+  --logourl: url('/img/logo/dark.png');
   --background: #ffffff;
   --color: #000000;
   --navcolor: #c4c3ca;
@@ -125,7 +125,6 @@ button:active {
 }
 
 @media screen and (max-width: 1200px) {
-
   .cursor,
   .cursor2,
   .cursor3 {
@@ -147,7 +146,10 @@ button:active {
   background-size: cover;
   background-image: var(--logourl);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-  transition: opacity 0.2s, border-radius 0.2s, box-shadow 0.2s;
+  transition:
+    opacity 0.2s,
+    border-radius 0.2s,
+    box-shadow 0.2s;
   transition-timing-function: ease-out;
 }
 
@@ -196,10 +198,19 @@ button:active {
   background-color: var(--color);
   margin-bottom: 7px;
   cursor: pointer;
-  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-  transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease, background-color 0.5s ease;
-  transition: transform 0.2s ease, background-color 0.5s ease, -webkit-transform 0.2s ease;
+  -webkit-transition:
+    background-color 0.5s ease,
+    -webkit-transform 0.2s ease;
+  transition:
+    background-color 0.5s ease,
+    -webkit-transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.5s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.5s ease,
+    -webkit-transform 0.2s ease;
 }
 
 .m-i-left {
@@ -225,7 +236,7 @@ button:active {
 
 .nav:before,
 .nav:after {
-  content: "";
+  content: '';
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -234,7 +245,9 @@ button:active {
   -webkit-transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s, -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  transition:
+    transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s,
+    -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   -webkit-transform: translateX(0%) translateY(-100%);
   transform: translateX(0%) translateY(-100%);
 }
@@ -283,10 +296,19 @@ button:active {
   letter-spacing: 3px;
   -webkit-transform: translate(0%, 100%);
   transform: translate(0%, 100%);
-  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.2s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.2s ease, transform 0.3s ease;
-  transition: opacity 0.2s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition:
+    opacity 0.2s ease,
+    -webkit-transform 0.3s ease;
+  transition:
+    opacity 0.2s ease,
+    -webkit-transform 0.3s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s ease,
+    -webkit-transform 0.3s ease;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -486,10 +508,23 @@ body.n-ac .nav-li {
   opacity: 1;
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
-  -webkit-transition: opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition:
+    opacity 0.3s ease,
+    color 0.3s ease,
+    -webkit-transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease,
+    -webkit-transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease,
+    -webkit-transform 0.3s ease;
 }
 
 body.n-ac .nav-li:nth-child(0) {
@@ -644,7 +679,10 @@ body.n-ac .nav-li:nth-child(10) {
   height: 50px;
   border-radius: 3px;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-  transition: opacity 0.2s, border-radius 0.2s, box-shadow 0.2s;
+  transition:
+    opacity 0.2s,
+    border-radius 0.2s,
+    box-shadow 0.2s;
   transition-timing-function: ease-out;
 }
 
@@ -796,7 +834,9 @@ body.n-ac .nav-li:nth-child(10) {
   justify-content: space-between;
   padding: 1em;
   border-radius: 5px;
-  transition: border 180ms ease-out 0s, background 180ms ease-out 0s;
+  transition:
+    border 180ms ease-out 0s,
+    background 180ms ease-out 0s;
   margin-bottom: 5px;
 }
 
@@ -870,7 +910,9 @@ body.n-ac .nav-li:nth-child(10) {
   -webkit-box-align: center;
   align-items: center;
   padding: 10px 25px;
-  transition: border 180ms ease-out 0s, background 180ms ease-out 0s;
+  transition:
+    border 180ms ease-out 0s,
+    background 180ms ease-out 0s;
   color: #fff;
   background-color: rgb(68, 179, 127);
   border: none;
@@ -894,9 +936,8 @@ a {
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type='checkbox'],
+  input[type='radio'] {
     --active: #275efe;
     --active-inner: #fff;
     --focus: 2px rgba(39, 94, 254, 0.3);
@@ -916,21 +957,26 @@ a {
     cursor: pointer;
     border: 1px solid var(--bc, var(--border));
     background: var(--b, var(--background));
-    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    transition:
+      background 0.3s,
+      border-color 0.3s,
+      box-shadow 0.2s;
   }
 
-  input[type="checkbox"]:after,
-  input[type="radio"]:after {
-    content: "";
+  input[type='checkbox']:after,
+  input[type='radio']:after {
+    content: '';
     display: block;
     left: 0;
     top: 0;
     position: absolute;
-    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    transition:
+      transform var(--d-t, 0.3s) var(--d-t-e, ease),
+      opacity var(--d-o, 0.2s);
   }
 
-  input[type="checkbox"]:checked,
-  input[type="radio"]:checked {
+  input[type='checkbox']:checked,
+  input[type='radio']:checked {
     --b: var(--active);
     --bc: var(--active);
     --d-o: 0.3s;
@@ -938,51 +984,51 @@ a {
     --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
   }
 
-  input[type="checkbox"]:disabled,
-  input[type="radio"]:disabled {
+  input[type='checkbox']:disabled,
+  input[type='radio']:disabled {
     --b: var(--disabled);
     cursor: not-allowed;
     opacity: 0.9;
   }
 
-  input[type="checkbox"]:disabled:checked,
-  input[type="radio"]:disabled:checked {
+  input[type='checkbox']:disabled:checked,
+  input[type='radio']:disabled:checked {
     --b: var(--disabled-inner);
     --bc: var(--border);
   }
 
-  input[type="checkbox"]:disabled+label,
-  input[type="radio"]:disabled+label {
+  input[type='checkbox']:disabled + label,
+  input[type='radio']:disabled + label {
     cursor: not-allowed;
   }
 
-  input[type="checkbox"]:hover:not(:checked):not(:disabled),
-  input[type="radio"]:hover:not(:checked):not(:disabled) {
+  input[type='checkbox']:hover:not(:checked):not(:disabled),
+  input[type='radio']:hover:not(:checked):not(:disabled) {
     --bc: var(--border-hover);
   }
 
-  input[type="checkbox"]:focus,
-  input[type="radio"]:focus {
+  input[type='checkbox']:focus,
+  input[type='radio']:focus {
     outline: none;
   }
 
-  input[type="checkbox"]:not(.switch),
-  input[type="radio"]:not(.switch) {
+  input[type='checkbox']:not(.switch),
+  input[type='radio']:not(.switch) {
     width: 21px;
   }
 
-  input[type="checkbox"]:not(.switch):after,
-  input[type="radio"]:not(.switch):after {
+  input[type='checkbox']:not(.switch):after,
+  input[type='radio']:not(.switch):after {
     opacity: var(--o, 0);
   }
 
-  input[type="checkbox"]:not(.switch):checked,
-  input[type="radio"]:not(.switch):checked {
+  input[type='checkbox']:not(.switch):checked,
+  input[type='radio']:not(.switch):checked {
     --o: 1;
   }
 
-  input[type="checkbox"]+label,
-  input[type="radio"]+label {
+  input[type='checkbox'] + label,
+  input[type='radio'] + label {
     font-size: 14px;
     line-height: 21px;
     display: inline-block;
@@ -991,11 +1037,11 @@ a {
     margin-left: 4px;
   }
 
-  input[type="checkbox"]:not(.switch) {
+  input[type='checkbox']:not(.switch) {
     border-radius: 7px;
   }
 
-  input[type="checkbox"]:not(.switch):after {
+  input[type='checkbox']:not(.switch):after {
     width: 5px;
     height: 9px;
     border: 2px solid var(--active-inner);
@@ -1006,16 +1052,16 @@ a {
     transform: rotate(var(--r, 20deg));
   }
 
-  input[type="checkbox"]:not(.switch):checked {
+  input[type='checkbox']:not(.switch):checked {
     --r: 43deg;
   }
 
-  input[type="checkbox"].switch {
+  input[type='checkbox'].switch {
     width: 38px;
     border-radius: 11px;
   }
 
-  input[type="checkbox"].switch:after {
+  input[type='checkbox'].switch:after {
     left: 2px;
     top: 2px;
     border-radius: 50%;
@@ -1025,20 +1071,20 @@ a {
     transform: translateX(var(--x, 0));
   }
 
-  input[type="checkbox"].switch:checked {
+  input[type='checkbox'].switch:checked {
     --ab: var(--active-inner);
     --x: 17px;
   }
 
-  input[type="checkbox"].switch:disabled:not(:checked):after {
+  input[type='checkbox'].switch:disabled:not(:checked):after {
     opacity: 0.6;
   }
 
-  input[type="radio"] {
+  input[type='radio'] {
     border-radius: 50%;
   }
 
-  input[type="radio"]:after {
+  input[type='radio']:after {
     width: 19px;
     height: 19px;
     border-radius: 50%;
@@ -1047,7 +1093,7 @@ a {
     transform: scale(var(--s, 0.7));
   }
 
-  input[type="radio"]:checked {
+  input[type='radio']:checked {
     --s: 0.5;
   }
 }

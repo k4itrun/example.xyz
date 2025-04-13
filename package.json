@@ -1,24 +1,48 @@
 {
   "name": "expressjs",
   "version": "1.0.0",
+  "exports": null,
   "type": "module",
   "description": "A simple Express.js application using EJS for templating",
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-minify-html-terser": "^1.0.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.12"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "format": "prettier . --write --cache --ignore-unknown",
+    "format:check": "prettier . --check --cache --ignore-unknown",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "engines": {
     "node": "22.x"
   },
-  "author": "k4itrun",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k4itrun/expressjs.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "k4itrun",
+    "email": "contact@w1sh.xyz"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k4itrun/expressjs/issues"
+  },
+  "homepage": "https://github.com/k4itrun/expressjs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-minify-html-terser": "^1.0.2"
+  },
+  "devDependencies": {
+    "@k4i/eslint-config": "^2.0.0",
+    "@k4i/prettier-config": "^2.0.0",
+    "ejs": "^3.1.6",
+    "nodemon": "^2.0.12"
+  },
+  "packageManager": "pnpm@10.8.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }
