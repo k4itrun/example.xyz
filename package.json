@@ -34,8 +34,7 @@
     "express-minify-html-terser": "^1.0.2"
   },
   "devDependencies": {
-    "@k4i/eslint-config": "^2.0.0",
-    "@k4i/prettier-config": "^2.0.0",
+    "@k4i/config": "^1.0.1",
     "ejs": "^3.1.6",
     "nodemon": "^2.0.12"
   },
