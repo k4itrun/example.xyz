@@ -1,5 +1,5 @@
 {
-  "name": "example.xyz",
+  "name": "www.example.xyz",
   "description": "A simple Express.js application using EJS for templating",
   "version": "1.0.0",
   "exports": null,
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k4itrun/example.xyz.git"
+    "url": "git+https://github.com/k4itrun/www.example.xyz.git"
   },
   "keywords": [],
   "author": {
@@ -27,9 +27,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k4itrun/example.xyz/issues"
+    "url": "https://github.com/k4itrun/www.example.xyz/issues"
   },
-  "homepage": "https://github.com/k4itrun/example.xyz#readme",
+  "homepage": "https://github.com/k4itrun/www.example.xyz#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-minify-html-terser": "^1.0.2"
