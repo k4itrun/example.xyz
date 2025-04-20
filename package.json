@@ -1,47 +1,66 @@
 {
-  "name": "expressjs",
+  "name": "example.xyz",
+  "description": "A simple Express.js application using EJS for templating",
   "version": "1.0.0",
   "exports": null,
   "type": "module",
-  "description": "A simple Express.js application using EJS for templating",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
+    "start": "node src/app",
+    "dev": "nodemon src/app",
+    "hooks:init": "husky",
+    "hooks:lint": "lint-staged",
+    "ci:release": "semantic-release",
+    "ci:commitlint": "commitlint --from=HEAD~10",
     "format": "prettier . --write --cache --ignore-unknown",
     "format:check": "prettier . --check --cache --ignore-unknown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "engines": {
-    "node": "22.x"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k4itrun/expressjs.git"
+    "url": "git+https://github.com/k4itrun/example.xyz.git"
   },
   "keywords": [],
   "author": {
     "name": "k4itrun",
-    "email": "contact@w1sh.xyz"
+    "email": "billoneta@proto.me"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k4itrun/expressjs/issues"
+    "url": "https://github.com/k4itrun/example.xyz/issues"
   },
-  "homepage": "https://github.com/k4itrun/expressjs#readme",
+  "homepage": "https://github.com/k4itrun/example.xyz#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-minify-html-terser": "^1.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/types": "^19.8.0",
+    "@dotenvx/dotenvx": "^1.41.0",
     "@k4i/config": "^1.0.1",
+    "@next/eslint-plugin-next": "^15.3.1",
     "ejs": "^3.1.6",
-    "nodemon": "^2.0.12"
+    "eslint": "^9.25.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.3"
   },
-  "packageManager": "pnpm@10.8.0",
+  "lint-staged": {
+    "*.{ts,tsx,js,json,md}": [
+      "prettier . --write --cache --ignore-unknown"
+    ],
+    "*.{ts,tsx,js}": [
+      "eslint . --fix"
+    ]
+  },
+  "packageManager": "pnpm@10.8.1",
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild"
+      "esbuild",
+      "unrs-resolver"
     ]
   }
 }

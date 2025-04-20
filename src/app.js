@@ -45,6 +45,7 @@ app.use((req, res) => {
   res.status(404).render('404', { navLinks, site, openGraph, twitter, fonts, adsense });
 });
 
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).render('500', { navLinks, site, openGraph, twitter, fonts, adsense });
