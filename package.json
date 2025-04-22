@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/k4itrun/www.example.app#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^5.0.0",
     "express-minify-html-terser": "^1.0.2"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "eslint": "^9.25.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
-    "nodemon": "^2.0.12",
+    "nodemon": "^3.0.0",
     "prettier": "^3.5.3",
     "semantic-release": "^24.2.3"
   },
